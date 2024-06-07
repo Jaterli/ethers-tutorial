@@ -1,4 +1,7 @@
 /*
+
+Ejercicio personal
+
 Obtener información de una dirección ENS
 
 Dado el bloque con número 19748211, programa un
