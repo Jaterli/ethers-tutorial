@@ -27,7 +27,7 @@ const abi = [
 const contract = new ethers.Contract(contractAddress, abi, sepoliaProvider);
 
 // Clave privada de la cuenta de la cartera
-const privateKey = "ffd28363420a429a713dbdb2b26608825afeb8b4a52fb43b76356a7da39ba839";
+const privateKey = "Your_private-key";
 // Crea una cartera utilizando la clave privada y el proveedor JSON-RPC
 const wallet = new ethers.Wallet(privateKey, sepoliaProvider);
 
