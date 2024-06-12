@@ -2,14 +2,16 @@
 const { ethers } = require("ethers");
 
 // Crea un proveedor de JSON-RPC para interactuar con la blockchain de Ethereum a través de GetBlock
-const sepoliaProvider = new ethers.providers.JsonRpcProvider("https://go.getblock.io/74d52d7334a04fca8d70bd305d497157");
+// Al conectarnos a través de un objeto provider, el contrato solo tendrá permisos de lectura.
+// Si lo hacemos a través de un signer, el contrato tendrá permisos de lectura y de escritura.
+const sepoliaProvider = new ethers.providers.JsonRpcProvider("https://go.getblock.io/ce22d55166e348ba9f69b46b7b9f2c85");
 
-// Dirección del contrato inteligente
+// Dirección del contrato inteligente (token Link, token del standard ERC-20)
 const contractAddress = "0x779877A7B0D9E8603169DdbD7836e478b4624789";
 
-// ABI (Interfaz de aplicación de contrato) del contrato inteligente
+// ABI (Interfaz de aplicación de contrato) del smart contract
 const abi = [
-  // Métodos de lectura del contrato
+  // Métodos de lectura del contrato ERC-20
   "function name() public view returns (string)",
   "function symbol() public view returns (string)",
   "function totalSupply() public view returns (uint256)",
@@ -26,7 +28,7 @@ const abi = [
 const contract = new ethers.Contract(contractAddress, abi, sepoliaProvider);
 
 // Clave privada de la cuenta de la cartera
-const privateKey = "ffd28363420a429a713dbdb2b26608825afeb8b4a52fb43b76356a7da39ba839";
+const privateKey = "ffd......839";
 // Crea una cartera utilizando la clave privada y el proveedor JSON-RPC
 const wallet = new ethers.Wallet(privateKey, sepoliaProvider);
 // Dirección de la cuenta 2

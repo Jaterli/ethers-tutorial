@@ -5,7 +5,7 @@ const { ethers } = require("ethers");
 const sepoliaProvider = new ethers.providers.JsonRpcProvider("https://go.getblock.io/74d52d7334a04fca8d70bd305d497157");
 
 // Crea una cartera utilizando una clave privada y el proveedor JSON-RPC
-const privateKey = "ffd28363420a429a713dbdb2b26608825afeb8b4a52fb43b76356a7da39ba839";
+const privateKey = "ffd...839";
 const walletFromPrivateKey = new ethers.Wallet(privateKey, sepoliaProvider);
 
 // Dirección de la cuenta destino
