@@ -6,7 +6,7 @@ const provider = new ethers.providers.JsonRpcProvider("https://go.getblock.io/f2
 const sepoliaProvider = new ethers.providers.JsonRpcProvider("https://go.getblock.io/74d52d7334a04fca8d70bd305d497157");
 
 // Crea una cartera utilizando una clave privada y el proveedor JSON-RPC
-const privateKey = "ffd28363420a429a713dbdb2b26608825afeb8b4a52fb43b76356a7da39ba839";
+const privateKey = "Your-private-key";
 const walletFromPrivateKey = new ethers.Wallet(privateKey, provider);
 
 // Crea una cartera aleatoria
